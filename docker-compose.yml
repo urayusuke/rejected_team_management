@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  nuxt:
+    build: 
+        context: ./
+        dockerfile: ./Dockerfile
+    working_dir: /home/node/app/project
+    ports:
+      - 9000:3000
+    volumes:
+      - ./:/home/node/app
+    command: yarn run dev
